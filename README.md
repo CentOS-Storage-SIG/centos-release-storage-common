@@ -7,3 +7,16 @@ packages land at the right tag for inclusion in CentOS Extras:
 
  - core7-extras-common-el7.centos (tag: core7-extras-common-candidate)
  - core6-extras-common-el6.centos (tag: core6-extras-common-candidate)
+
+Building the package can be done like this:
+
+
+    $ rpmbuild -bs
+               --define "_sourcedir $PWD" --define "_srcrpmdir $PWD" \
+               --define "dist .el7.centos" \
+               centos-release-storage-common.spec
+
+    $ koji -p centos \
+           build core7-extras-common-el7.centos \
+           centos-release-storage-common-1-2.el7.centos.src.rpm
+
