@@ -2,7 +2,7 @@ Summary: Common release file to establish shared metadata for CentOS Storage SIG
 Name: centos-release-storage-common
 Epoch: 0
 Version: 1
-Release: 1%{?dist}
+Release: 2%{?dist}
 License: GPL
 Group: System Environment/Base
 Source0: RPM-GPG-KEY-CentOS-SIG-Storage
@@ -33,6 +33,9 @@ rm -rf $RPM_BUILD_ROOT
 /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-Storage
 
 %changelog
+* Thu Nov 12 2015 Niels de Vos <ndevos@redha.com> - 1-2
+- rebuild for CentOS Extras
+
 * Thu Nov 12 2015 Niels de Vos <ndevos@redha.com> - 1-1
 - Basic setup with the gpg key
 - Based on the centos-release-virt-common package
